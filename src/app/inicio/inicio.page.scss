@@ -1,0 +1,137 @@
+ion-header {
+  --background: #fff;
+  --ion-color-primary: #000;
+  ion-toolbar {
+    --padding-top: 5px;
+    --padding-bottom: 5px;
+    padding-left: 15px;
+    height: 50px;
+    ion-buttons {
+      position: absolute;
+      right: 30px;
+      top: 5px;
+      ion-button {
+        font-size: 20px;
+      }
+
+    }
+  }
+}
+
+ion-title {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ion-segment {
+  --padding: 10px;
+  --color-checked: #3880ff;
+  --color: #000;
+  --indicator-color: #3880ff;
+  --indicator-height: 4px;
+  --border-radius: 0;
+  padding: 15px 10px;
+}
+
+ion-segment-button {
+  --padding: 8px 16px;
+  --color: #000;
+  --color-checked: #3880ff;
+}
+
+ion-grid {
+  --ion-grid-column-padding: 8px;
+}
+
+ion-card {
+  padding: 20px;
+  margin: 16px 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  ion-img {
+    width: 45%;
+    height: 250px;
+  }
+
+  ion-card-title {
+    font-size: 1.2rem;
+    margin-top: 8px;
+  }
+
+  ion-card-content {
+    font-size: 1rem;
+    ion-badge {
+      --background: #ffc409;
+      float: right;
+      margin-top: -35px;
+    }
+  }
+}
+
+ion-note {
+  font-size: 25px;
+  color: #E86A33;
+}
+
+ion-badge {
+  --padding-start: 8px;
+  --padding-end: 8px;
+  --padding-top: 4px;
+  --padding-bottom: 4px;
+}
+
+ion-icon {
+  --color: #000;
+  margin-right: 4px;
+}
+ion-footer {
+  ion-toolbar {
+    ion-row {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
+ion-tab-bar {
+  --background: #fff;
+  --color-selected: #3880ff;
+}
+
+ion-tab-button {
+  // Estilos para los botones de las pestañas aquí
+}
+
+ion-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    width: 100%; // Asegúrate de que la imagen del logo sea responsive dentro de su contenedor
+  }
+
+  ion-card-header {
+    padding: 0;
+  }
+
+  ion-card-title {
+    font-size: 1rem; // Ajusta el tamaño de fuente según necesites
+    font-weight: bold;
+  }
+
+  ion-card-content {
+    font-size: 0.8rem; // Ajusta el tamaño de fuente según necesites
+    padding: 0 10px 10px 10px;
+    color: #666; // Ajusta el color del texto según necesites
+
+    .restaurant-rating {
+      display: flex;
+      align-items: center;
+      ion-icon {
+        color: #ffcc00; // Ajusta el color del icono de estrella
+        margin-right: 4px;
+      }
+    }
+  }
+}

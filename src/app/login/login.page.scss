@@ -1,0 +1,15 @@
+ion-content {
+  --ion-background-color: var(--ion-background-color-rgb);
+
+  .login-card {
+    margin-top: 30vh; // Centra la tarjeta verticalmente en la vista
+
+    @media (max-height: 500px) {
+      margin-top: 10vh;
+    }
+  }
+
+  ion-button {
+    margin-top: 20px; // Espacio encima del botón
+  }
+}

@@ -1,0 +1,38 @@
+.container_global {
+  height: 100%;
+  width: 100%;
+  background: #1e2023;
+}
+header{
+  margin-bottom: 100px;
+}
+.button{
+  color: #F9F9F9;
+  border-radius: 30px;
+  width: 80%;
+  background: #E86A33;
+}
+ion-button{
+  width: fit-content;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 16px;
+
+}
+ion-toolbar{
+  width: fit-content;
+  margin-bottom: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-content {
+  ion-buttons {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  position: relative;
+  top: 20%;
+  }
+}

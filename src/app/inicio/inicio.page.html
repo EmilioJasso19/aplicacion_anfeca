@@ -1,0 +1,107 @@
+<!-- Barra superior -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large">DeliApp</ion-title>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" value="restaurantes">
+    <ion-segment-button value="restaurantes">
+      <ion-label>Restaurantes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="platillos">
+      <ion-label>Platillos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-grid fixed>
+    <ng-container *ngIf="showRestaurants">
+      <ion-row>
+        <!-- Mostrar restaurantes -->
+        <ion-col size="12" size-lg="2" *ngFor="let item of restaurantItems">
+
+          <ion-card class="restaurant-card">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6">
+                  <img [src]="item.imgSrc" alt="Logo del restaurante" class="logo">
+                </ion-col>
+                <ion-col size="6">
+                  <ion-card-header>
+                    <ion-card-title>{{ item.title }}</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                    <div class="restaurant-rating">
+                      <ion-icon name="star" class="star-icon"></ion-icon>
+                      5.0
+                    </div>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+    </ng-container>
+    <ng-container *ngIf="!showRestaurants">
+      <ion-row>
+        <!-- Mostrar platillos -->
+        <ion-col size="12" size-md="4" size-lg="3" *ngFor="let item of dishItems">
+          <ion-card class="restaurant-card">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="6">
+                  <img [src]="item.imgSrc" alt="Logo del restaurante" class="logo">
+                </ion-col>
+                <ion-col size="6">
+                  <ion-card-header>
+                    <ion-card-title>{{item.title}}</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    {{ item.description }}
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
+
+<!-- Barra inferior -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-row>
+      <ion-col size="2" text-center>
+        <ion-button fill="clear" (click)="navigateHome()">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="2" text-center>
+        <ion-button fill="clear" (click)="navigateSearch()">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="2" text-center>
+        <ion-button fill="clear" (click)="navigateFavorites()">
+          <ion-icon slot="icon-only" name="heart"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col size="2" text-center>
+        <ion-button fill="clear" (click)="navigateSettings()">
+          <ion-icon slot="icon-only" name="settings"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
